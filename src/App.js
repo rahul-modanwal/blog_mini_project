@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, HashRouter } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import { createStore } from 'redux'
+import reducer from './redux/reducer'
+import { Provider } from 'react-redux'
+import Layouts from './components/Layouts';
+import React, { useState } from 'react';
+import './App.css'
+
+
+const initVal = {
+  authentication: {},
+  userData: {}
+}
+
+const store = createStore(reducer, initVal)
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Navbar />
+        <Layouts />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
 export default App;
+

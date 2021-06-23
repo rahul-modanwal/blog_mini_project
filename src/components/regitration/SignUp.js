@@ -91,7 +91,7 @@ function SignUp(props) {
       .then((res) => {
         // console.log(res.data, "signin page");
         const { username, password } = res.data;
-        setRegSuccess("Registration succesful, Please sign in after few seconds")
+        setRegSuccess("Registration successful, Please sign in after few seconds")
         setOpenR(!openR)
       })
       .catch((err) => {
@@ -179,76 +179,7 @@ function SignUp(props) {
         <Copyright />
       </Box>
     </Container>
-    
-    // <Container component="main" maxWidth="xs">
-    //   <CssBaseline />
-    //   <div className={classes.paper}>
-    //     <Snackbar open={openR} autoHideDuration={6000} onClose={handleClose}>
-    //       <Alert onClose={handleClose} severity="success">
-    //         {regSuccess}
-    //       </Alert>
-    //     </Snackbar>
-    //     <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-    //       <Alert onClose={handleClose} severity="error">
-    //         {userExist}
-    //       </Alert>
-    //     </Snackbar>
-    //     <Avatar className={classes.avatar}>
-    //       <LockOutlinedIcon />
-    //     </Avatar>
-    //     <Typography component="h1" variant="h5">
-    //       Sign up
-    //     </Typography>
-    //     <form className={classes.form} noValidate onSubmit={handleSubmit}>
-    //       <Grid container spacing={2}>
-    //         <Grid item xs={12}>
-    //           <TextField
-    //             variant="outlined"
-    //             required
-    //             fullWidth
-    //             id="username"
-    //             label="User Name"
-    //             name="username"
-    //             autoComplete="uname"
-    //             onChange={(evt) => setUserName(evt.target.value)}
-    //           />
-    //         </Grid>
-    //         <Grid item xs={12}>
-    //           <TextField
-    //             variant="outlined"
-    //             required
-    //             fullWidth
-    //             name="password"
-    //             label="Password"
-    //             type="password"
-    //             id="password"
-    //             autoComplete="current-password"
-    //             onChange={(evt) => setPassword(evt.target.value)}
-    //           />
-    //         </Grid>
-    //       </Grid>
-    //       <Button
-    //         type="submit"
-    //         fullWidth
-    //         variant="contained"
-    //         color="primary"
-    //         className={classes.submit}
-    //       >
-    //         Sign Up
-    //       </Button>
-    //       <Grid container justify="flex-end">
-    //         <Grid item>
-    //           <Link href="login/" variant="body2">
-    //             Already have an account? Sign in
-    //           </Link>
-    //         </Grid>
-    //       </Grid>
-    //     </form>
-    //   </div>
-    //   <Box mt={5}>
-    //     <Copyright />
-    //   </Box>
-    // </Container>
+  
   );
 }
 
